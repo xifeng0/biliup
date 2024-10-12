@@ -99,7 +99,7 @@
 
 
 ## 捐赠
-* 爱发电 :`https://afdian.net/a/biliup`
+* 爱发电 :`https://afdian.com/a/biliup`
 
 
 ## Stars
