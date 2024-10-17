@@ -13,7 +13,7 @@ from ..plugins import match1, logger
 
 # VALID_URL_BASE = r"https?://(.*?)\.sooplive\.co.kr/(?P<username>\w+)(?:/\d+)?"
 VALID_URL_BASE = r"https?://play\.sooplive\.co.kr/(?P<username>\w+)(?:/\d+)?"
-CHANNEL_API_URL = "https://www.sooplive.co.kr/afreeca/player_live_api.php"
+CHANNEL_API_URL = "https://live.sooplive.co.kr/afreeca/player_live_api.php"
 
 QUALITIES = ["original", "hd4k", "hd", "sd"]
 
