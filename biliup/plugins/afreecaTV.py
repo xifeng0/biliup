@@ -11,14 +11,14 @@ from ..engine.decorators import Plugin
 from ..engine.download import DownloadBase
 from ..plugins import match1, logger
 
-# VALID_URL_BASE = r"https?://(.*?)\.afreecatv\.com/(?P<username>\w+)(?:/\d+)?"
-VALID_URL_BASE = r"https?://play\.afreecatv\.com/(?P<username>\w+)(?:/\d+)?"
-CHANNEL_API_URL = "https://live.afreecatv.com/afreeca/player_live_api.php"
+# VALID_URL_BASE = r"https?://(.*?)\.sooplive\.co.kr/(?P<username>\w+)(?:/\d+)?"
+VALID_URL_BASE = r"https?://play\.sooplive\.co.kr/(?P<username>\w+)(?:/\d+)?"
+CHANNEL_API_URL = "https://www.sooplive.co.kr/afreeca/player_live_api.php"
 
 QUALITIES = ["original", "hd4k", "hd", "sd"]
 
 
-@Plugin.download(regexp=r"https?://(.*?)\.afreecatv\.com/(?P<username>\w+)(?:/\d+)?")
+@Plugin.download(regexp=r"https?://(.*?)\.sooplive\.co.kr/(?P<username>\w+)(?:/\d+)?")
 class AfreecaTV(DownloadBase):
     def __init__(self, fname, url, suffix='flv'):
         super().__init__(fname, url, suffix)
@@ -94,7 +94,7 @@ class AfreecaTVUtils:
                 password = config.get('user', {}).get('afreecatv_password', '')
                 if not username or not password:
                     return None
-                response = requests.post("https://login.afreecatv.com/app/LoginAction.php", data={
+                response = requests.post("https://login.sooplive.co.kr/app/LoginAction.php", data={
                     "szUid": username,
                     "szPassword": password,
                     "szWork": "login",
